@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Display a map on a webpage</title>
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
+
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+
+<style>
+
+body { margin: 0; padding: 0; }
+
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="map"></div>
+
+<script>
+
+	mapboxgl.accessToken = 'pk.eyJ1IjoibGl1amlucCIsImEiOiJja3cxZGJidTQwMmtpMzFweDI5a291MzdwIn0.7qvyED_5kjKF33a3fq7VoA';
+
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+
+        style: 'mapbox://styles/liujinp/ckw2p4hid12wd14p9pkszc4sm', // style URL
+
+        center: [-224.366667, 158.966667], // starting position [lng, lat] //I have moved the sign from this vs. 11-19
+
+        zoom: 11 // starting zoom
+    });
+
+</script>
+
+
+
+</body>
+
+</html>
